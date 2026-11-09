@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5EBE6"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Judul Halaman -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catat Pengeluaran Usaha"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#4A3B32"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Input Kategori Pengeluaran -->
+    <EditText
+        android:id="@+id/etKategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kategori (Contoh: Beli Bahan Baku)"
+        android:textColor="#4A3B32"
+        android:textColorHint="#9E8A7E"
+        android:inputType="textCapWords"
+        android:background="@android:drawable/editbox_background_normal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Input Keterangan -->
+    <EditText
+        android:id="@+id/etKeterangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Keterangan (Opsional)"
+        android:textColor="#4A3B32"
+        android:textColorHint="#9E8A7E"
+        android:inputType="text"
+        android:background="@android:drawable/editbox_background_normal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Input Nominal -->
+    <EditText
+        android:id="@+id/etNominal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nominal (Rp)"
+        android:textColor="#4A3B32"
+        android:textColorHint="#9E8A7E"
+        android:inputType="numberDecimal"
+        android:background="@android:drawable/editbox_background_normal"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Tombol Simpan Pengeluaran -->
+    <Button
+        android:id="@+id/btnSimpanPengeluaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan Pengeluaran"
+        android:backgroundTint="#4A3B32"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"/>
+
+</LinearLayout>

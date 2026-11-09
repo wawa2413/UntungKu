@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Ketika menu dipilih / ditekan (Dark Brown) -->
+    android:state_selected="true"
+    <shape android:shape="rectangle">
+        <solid android:color="#4A3B32"/>
+        <corners android:radius="24dp"/>
+    </shape>
+
+    <!-- Warna default saat tidak dipilih (Krem terang/abu lembut) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#EFEBE9"/>
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+</selector>

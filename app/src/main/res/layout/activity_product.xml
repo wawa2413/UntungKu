@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5EBE6"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Judul Halaman -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelola Produk &amp; Stok"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#4A3B32"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Tombol Tambah Produk -->
+    <Button
+        android:id="@+id/btnTambahProduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Tambah Produk Baru"
+        android:backgroundTint="#4A3B32"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Daftar List Produk (RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>

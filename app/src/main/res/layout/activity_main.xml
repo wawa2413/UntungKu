@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5EBE6"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- HEADER & TOMBOL LAPORAN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UntungKu"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#4A3B32"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pencatatan usaha jadi lebih mudah"
+                android:textSize="12sp"
+                android:textColor="#8D7B68"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnUnduhLaporan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_launcher_background"
+            android:backgroundTint="#EFEBE9"
+            android:src="@android:drawable/ic_menu_save"
+            app:tint="#4A3B32"
+            android:contentDescription="Unduh"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- KARTU RINGKASAN KEUANGAN -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Penjualan"
+                    android:textSize="11sp"
+                    android:textColor="#8D7B68"/>
+
+                <TextView
+                    android:id="@+id/tvTotalPenjualan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A3B32"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#EFEBE9"
+                android:layout_marginHorizontal="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keuntungan Kotor"
+                    android:textSize="11sp"
+                    android:textColor="#8D7B68"/>
+
+                <TextView
+                    android:id="@+id/tvTotalKeuntungan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A3B32"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- MENU OVAL BERDERET KE SAMPING -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/menuProduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelola Produk"
+                android:textColor="#4A3B32"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:background="@drawable/bg_menu_selector"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/menuPenjualan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catat Penjualan"
+                android:textColor="#4A3B32"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:background="@drawable/bg_menu_selector"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/menuPengeluaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengeluaran"
+                android:textColor="#4A3B32"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:background="@drawable/bg_menu_selector"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/menuRiwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riwayat"
+                android:textColor="#4A3B32"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:background="@drawable/bg_menu_selector"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- KARTU KONTEN DINAMIS DI BAWAH -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardKontenDinamis"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_marginBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- JUDUL KONTEN & TOMBOL TAMBAH -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvJudulKonten"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kelola Produk"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A3B32"/>
+
+                <Button
+                    android:id="@+id/btnAksiTambah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="+ Tambah"
+                    android:textSize="11sp"
+                    android:backgroundTint="#4A3B32"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="8dp"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <!-- RECYCLERVIEW UNTUK KELOLA PRODUK & RIWAYAT -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvKontenList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="visible"/>
+
+            <!-- CONTAINER FORM UNTUK PENJUALAN / PENGELUARAN -->
+            <LinearLayout
+                android:id="@+id/layoutFormInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/spinnerProduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/etFormJumlah"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Jumlah Terjual (Qty)"
+                    android:textSize="13sp"
+                    android:inputType="number"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/etFormKeterangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Keterangan Pengeluaran"
+                    android:textSize="13sp"
+                    android:inputType="text"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/etFormNominal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Total Nominal (Rp)"
+                    android:textSize="13sp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="14dp"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btnSimpanForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="Simpan Data"
+                    android:backgroundTint="#4A3B32"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- TOMBOL KELUAR DI POJOK KIRI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start">
+
+        <TextView
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Keluar"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#C86D51"
+            android:background="?attr/selectableItemBackground"
+            android:padding="6dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+</LinearLayout>
